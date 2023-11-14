@@ -1,6 +1,6 @@
 # Создание ВМ для K8S
 
-data "yandex_compute_image" "ubuntu_image" {
+resource "yandex_compute_image" "ubuntu_image" {
   family = "ubuntu-2204-lts"
 }
 
@@ -73,7 +73,7 @@ resource "yandex_compute_instance" "worker-1" {
 # Создание ВМ WORKER-2
 resource "yandex_compute_instance" "worker-2" {
   name                      = "worker-1"
-  zone                      = "ru-central1-a"
+  zone                      = "ru-central1-b"
   allow_stopping_for_update = true
 
   resources {
