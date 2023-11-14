@@ -4,13 +4,13 @@ data "yandex_compute_image" "ubuntu_image" {
   family = "ubuntu-2204-lts"
 }
 
-data "yandex_compute_image" "nat-instance-ubuntu" {
-  family = "nat-instance-ubuntu"
-}
+//data "yandex_compute_image" "nat-instance-ubuntu" {
+//  family = "nat-instance-ubuntu"
+//}
 
 # Создание ВМ MASTER
-resource "yandex_compute_instance" "MASTER" {
-  name                      = "MASTER"
+resource "yandex_compute_instance" "master" {
+  name                      = "master"
   zone                      = "ru-central1-b"
   allow_stopping_for_update = true
 
@@ -40,8 +40,8 @@ resource "yandex_compute_instance" "MASTER" {
 }
 
 # Создание ВМ WORKER-1
-resource "yandex_compute_instance" "WORKER-1" {
-  name                      = "WORKER-1"
+resource "yandex_compute_instance" "worker-1" {
+  name                      = "worker-1"
   zone                      = "ru-central1-b"
   allow_stopping_for_update = true
 
@@ -71,8 +71,8 @@ resource "yandex_compute_instance" "WORKER-1" {
 }
 
 # Создание ВМ WORKER-2
-resource "yandex_compute_instance" "WORKER-2" {
-  name                      = "WORKER-1"
+resource "yandex_compute_instance" "worker-2" {
+  name                      = "worker-1"
   zone                      = "ru-central1-a"
   allow_stopping_for_update = true
 

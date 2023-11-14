@@ -1,5 +1,5 @@
 variable "yc_token" {
-   default = "y0_AgAAAAAK41XNAATuwQAAAADT-3mPtwf9gXa1THinE4l-9BVWM7oEQyo"
+   default = "y0_AgAAAAAK41XNAATuwQAAAADyAgV5wlPB9DztQ-i_BtBaU4yYh894eoQ"
 }
 
 variable "sa-access-key" {
